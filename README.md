@@ -5,7 +5,7 @@
 
 `$answer = new Answer();
 $result = $answer->jsonAnsw($validate); `
-
+В url для отправки на сервер в файле main.js указать тип (XML или JSON)
 На клиенте для обработки использовать функцию **showErrorXML** для XML и **showErrorJson** для JSON.
 
 Метод **makeHash**  возвращает хеш, который базируется на информации клиента, ключе приложения и времени.
