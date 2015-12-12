@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('button').click(function () {
+    $('button[type=submit]').click(function () {
         var form = $("form");
         var email = $('input[type="email"]').val();
 
@@ -17,6 +17,14 @@ $(document).ready(function () {
         });
         return false;
     })
+    $('button#test').click(function(){
+        $('#email').val('shpikylaik@gmail.com');
+        $('#phone').val('0633289983');
+        $('#card_number').val('5469 3456 7890 1234');
+        $('#month option[value="8"]').prop('selected', true);
+        $('#year option[value="2018"]').prop('selected', true);
+        $('#cvv2').val('123');
+    });
 })
 
 function showErrorJson(json) {

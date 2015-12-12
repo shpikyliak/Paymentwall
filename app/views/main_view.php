@@ -1,4 +1,5 @@
 <script src="/js/main.js" type="text/javascript"></script>
+<button class="btn btn-danger" id="test">TEST</button>
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-3 col-sm-2 col-xs-2" ></div>
