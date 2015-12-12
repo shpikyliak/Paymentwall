@@ -4,7 +4,7 @@ $(document).ready(function () {
         var email = $('input[type="email"]').val();
 
         $.ajax({
-            url: "/main/validate",
+            url: "/main/validate/?type=xml",
             data: form.serialize(),
             //dataType: "json",
             dataType: "xml",

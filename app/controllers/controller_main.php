@@ -24,8 +24,16 @@ class Controller_Main extends Controller
         $data = $_POST;
         $validate = $this->model->validate($data);
         $answer = new Answer();
-        //$result = $answer->jsonAnsw($validate); // return json
-        $result = $answer->XMLAnsw($validate); //return XML if you want
+        if ($_GET['type'] == 'json') {
+            /*set json headers*/
+            $result = $answer->jsonAnsw($validate); // return json
+        } elseif ($_GET['type'] == 'xml') {
+            /*set xml headers*/
+            $result = $answer->XMLAnsw($validate); //return XML if you want
+        } else {
+            /*set bad request status headers*/
+            $result = 'unsupported type';
+        }
         echo $result;
         if ($this->model->error->success) {
             $hash = $this->model->makeHash($data);
